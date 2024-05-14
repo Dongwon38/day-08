@@ -219,7 +219,10 @@ a.site-name {
     /* grid-template-columns: 1fr 1fr 1fr; */
 
     /* Create 3 columns, first two are 18.75rem, the last one will fill the remaining space */
-    grid-template-columns: repeat(2, 300px) 1fr;
+    /* grid-template-columns: repeat(2, 300px) 1fr; */
+
+    /* Create 3 columns, first two are 18.75rem, the last one is minimum 18.75rem and maximum the remaining space in the grid container */
+    grid-template-columns: repeat(2, 18.75rem) minmax(18.75rem, 1fr);
 
     /* Create 2 rows, 200 px height each*/
     /* grid-template-rows: 200px 200px; */
