@@ -238,6 +238,9 @@ a.site-name {
     /* grid-template-rows: 10rem 18.75rem auto; */
     gap: 1rem 1rem;
     justify-content: center;
+
+    align-items: stretch;
+    justify-items: stretch;
   }
 
   .photo-gallery img {
