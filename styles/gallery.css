@@ -93,18 +93,38 @@ a:active {
 --------------------------------------------------------------*/
 @media screen and (min-width: 68em) {
   .site-wrapper {
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 53rem) minmax(auto, 22rem) 1fr;
+
+    grid-template-areas:
+      "header header header header"
+      ". main sidebar ."
+      "footer footer footer	footer";
+  }
+
+  .sidebar-left {
+    grid-template-columns: 1fr minmax(auto, 22rem) minmax(auto, 53rem) 1fr;
+
+    grid-template-areas:
+      "header header header header"
+      ". sidebar main ."
+      "footer footer footer footer";
   }
 
   .site-header {
+    grid-area: header;
   }
 
   .site-main {
+    grid-area: main;
   }
 
   .site-sidebar {
+    grid-area: sidebar;
   }
 
   .site-footer {
+    grid-area: footer;
   }
 }
 
@@ -174,15 +194,18 @@ a.site-name {
   outline: 0.0625rem dotted;
 }
 
-@media screen and (min-width: 68em) {
+@media screen and (min-width: 30em) {
   .menu-toggle {
     display: none;
   }
 
   .site-header {
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 22rem) minmax(auto, 53rem) 1fr;
   }
 
   .site-name {
+    grid-column: 2 /3;
   }
 
   .site-navigation {
@@ -205,7 +228,7 @@ a.site-name {
 /* Main
 --------------------------------------------- */
 .site-main {
-  padding: 0 80px;
+  /* padding: 0 80px; */
 }
 
 @media (min-width: 40em) {
